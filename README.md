@@ -18,7 +18,7 @@ If you find our work useful in your research, please consider citing (to be upda
 
 ## Dependencies
 Requirements:
-- Python 3.7 with numpy, h5py, scipy, sklearn and Cython
+- Python 3.7 with numpy, pillow, h5py, scipy, sklearn and Cython
 - [PyTorch 1.9](https://pytorch.org/get-started/locally/) (other versions may also work)
 - [PyMCubes](https://github.com/pmneila/PyMCubes) (for marching cubes)
 - [OpenCV-Python](https://opencv-python-tutroals.readthedocs.io/en/latest/) (for reading and writing images)
@@ -27,3 +27,16 @@ Build Cython module:
 ```
 python setup.py build_ext --inplace
 ```
+
+## Datasets and pre-trained weights
+For data preparation, please see [data_preparation](https://github.com/qiminchen/ShaDDR/tree/main/data_preparation).
+
+We provide the ready-to-use datasets here.
+
+- [ShaDDR_data.zip]()
+
+We also provide the pre-trained network weights.
+
+- [ShaDDR_checkpoint.zip](https://drive.google.com/file/d/1FFvfHbVTrX5tFEil1W-3gfF3FeY76thb/view?usp=sharing)
+
+## Training
