@@ -49,7 +49,7 @@ Step 4: run *render.py* to render texture images from `top, bottom, left, right,
 ./blender/blender render_views.blend --background --python render.py
 ```
 
-Step 5: run *4_get_colored_voxels.py* to obtain the 3D RGB color grid/voxel. The code runs slower than the previous ones, therefore we recommend using multiple processes:
+Step 5: run *4_get_colored_voxels.py* to obtain the 3D RGB color grid/voxel stored in `hdf5` format. The code runs slower than the previous ones, therefore we recommend using multiple processes:
 ```
 python 4_get_colored_voxels.py <category_id> <process_id> <total_num_of_processes>
 ```
@@ -59,4 +59,9 @@ python 4_get_colored_voxels.py 03001627 0 4
 python 4_get_colored_voxels.py 03001627 1 4
 python 4_get_colored_voxels.py 03001627 2 4
 python 4_get_colored_voxels.py 03001627 3 4
+```
+
+(Optional) Step 6: run *5_visualize.py* to export colored mesh in `.ply` format. Visualize a few shapes using MeshLab or other tools to confirm.
+```
+python 5_visualize.py 03001627
 ```
