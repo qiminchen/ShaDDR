@@ -64,3 +64,29 @@ To output a few detailization results:
 python main.py --data_style style_color_car_16 --data_content content_car_test --data_dir ./data/02958343/ --input_size 64 --output_size 512 --test --test_tex --gpu 0
 ```
 The output mesh can be found in folder samples or you can specify `--sample_dir`.
+
+### IOU, LP, Div
+(Borrowed from [DECOR-GAN](https://github.com/czq142857/DECOR-GAN#iou-lp-div)) To test Strict-IOU, Loose-IOU, LP-IOU, Div-IOU, LP-F-score, Div-F-score:
+```
+python main.py --data_style style_color_chair_16 --data_content content_chair_test --data_dir ./data/03001627/ --input_size 32 --output_size 256 --prepvoxstyle --gpu 0
+python main.py --data_style style_color_chair_16 --data_content content_chair_test --data_dir ./data/03001627/ --input_size 32 --output_size 256 --prepvox --gpu 0
+python main.py --data_style style_color_chair_16 --data_content content_chair_test --data_dir ./data/03001627/ --input_size 32 --output_size 256 --evalvox --gpu 0
+```
+The first command prepares the patches in 16 detailed training shapes, thus --data_style is style_color_chair_16. Specifically, it removes duplicated patches in each detailed training shape and only keeps unique patches for faster computation in the following testing procedure. The unique patches are written to the folder unique_patches. Note that if you are testing multiple models, you do not have to run the first command every time -- just copy the folder unique_patches or make a symbolic link.
+
+The second command runs the model and outputs the detailization results, in folder output_for_eval.
+
+The third command evaluates the outputs. The results are written to folder eval_output ( result_IOU_mean.txt, result_LP_Div_Fscore_mean.txt, result_LP_Div_IOU_mean.txt ).
+
+### Cls-score
+(Borrowed from [DECOR-GAN](https://github.com/czq142857/DECOR-GAN#cls-score)) To test Cls-score:
+```
+python main.py --data_style style_color_chair_16 --data_content content_chair_all --data_dir ./data/03001627/ --input_size 32 --output_size 256 --prepimgreal --gpu 0
+python main.py --data_style style_color_chair_16 --data_content content_chair_test --data_dir ./data/03001627/ --input_size 32 --output_size 256 --prepimg --gpu 0
+python main.py --data_style style_color_chair_16 --data_content content_chair_all --data_dir ./data/03001627/ --input_size 32 --output_size 256 --evalimg --gpu 0
+```
+The first command prepares rendered views of all content shapes, thus --data_content is content_chair_all. The rendered views are written to the folder render_real_for_eval. Note that if you are testing multiple models, you do not have to run the first command every time -- just copy the folder render_real_for_eval or make a symbolic link.
+
+The second command runs the model and outputs rendered views of the detailization results, in folder render_fake_for_eval.
+
+The third command evaluates the outputs. The results are written to folder eval_output ( result_Cls_score.txt ).
