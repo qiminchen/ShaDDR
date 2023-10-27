@@ -33,11 +33,11 @@ For data preparation, please see [data_preparation](https://github.com/qiminchen
 
 We provide the ready-to-use datasets here.
 
-- [ShaDDR_data.zip]()
+- [ShaDDR_data](https://drive.google.com/drive/folders/1IKm4mo08p-nex54esbEmaJiKbb-jjq_7?usp=sharing)
 
 We also provide the pre-trained network weights.
-
-- [ShaDDR_checkpoint.zip](https://drive.google.com/file/d/1FFvfHbVTrX5tFEil1W-3gfF3FeY76thb/view?usp=sharing)
+https://drive.google.com/drive/folders/1-6MZhvPL_OgAFnWwnGb9lWC7_xoQu6Aa?usp=sharing
+- [ShaDDR_checkpoint](https://drive.google.com/drive/folders/1-6MZhvPL_OgAFnWwnGb9lWC7_xoQu6Aa?usp=sharing)
 
 ## Training
 Make sure to train the geometry detailization first, then train texture generation.
