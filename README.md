@@ -36,7 +36,7 @@ We provide the ready-to-use datasets here.
 - [ShaDDR_data](https://drive.google.com/drive/folders/1IKm4mo08p-nex54esbEmaJiKbb-jjq_7?usp=sharing)
 
 We also provide the pre-trained network weights.
-https://drive.google.com/drive/folders/1-6MZhvPL_OgAFnWwnGb9lWC7_xoQu6Aa?usp=sharing
+
 - [ShaDDR_checkpoint](https://drive.google.com/drive/folders/1-6MZhvPL_OgAFnWwnGb9lWC7_xoQu6Aa?usp=sharing)
 
 ## Training
