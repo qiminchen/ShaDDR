@@ -90,3 +90,6 @@ The first command prepares rendered views of all content shapes, thus --data_con
 The second command runs the model and outputs rendered views of the detailization results, in folder render_fake_for_eval.
 
 The third command evaluates the outputs. The results are written to folder eval_output ( result_Cls_score.txt ).
+
+## GUI
+Coming up this weeks...
