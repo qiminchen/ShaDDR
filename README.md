@@ -112,3 +112,6 @@ rotate - left click + drag
 zoom in/out - scroll wheel
 ```
 GUI currently only supports editing voxel from scratch, more input formats will be supported in the future.
+
+### Demo video
+https://github.com/qiminchen/ShaDDR/blob/main/gui/shaddr_demo.mp4
