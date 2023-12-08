@@ -92,4 +92,23 @@ The second command runs the model and outputs rendered views of the detailizatio
 The third command evaluates the outputs. The results are written to folder eval_output ( result_Cls_score.txt ).
 
 ## GUI
-Coming up this weeks...
+1. Build Cython module:
+```
+cd gui
+python setup.py build_ext --inplace
+
+```
+2. Make sure you put the checkpoint.pth in the `checkpoint` folder
+3. Change the `cpk_path` in the `gui_demo.py`
+4. Run the GUI
+```
+python gui_demo.py --category 00000000
+```
+5. Some basic modeling operations of GUI
+```
+add voxel - ctrl + left click
+delete voxel - shift + left click
+rotate - left click + drag
+zoom in/out - scroll wheel
+```
+GUI currently only supports editing voxel from scratch, more input formats will be supported in the future.
