@@ -98,7 +98,7 @@ cd gui
 python setup.py build_ext --inplace
 
 ```
-2. Make sure you put the checkpoint.pth in the `checkpoint` folder
+2. Make sure you put the checkpoint.pth in the `checkpoint` folder, checkpoint can be found [here](https://drive.google.com/drive/folders/1BarCEue5fdOIOZGwJHQDwKq-PbsM0ZCb?usp=drive_link)
 3. Change the `cpk_path` in the `gui_demo.py`
 4. Run the GUI
 ```
