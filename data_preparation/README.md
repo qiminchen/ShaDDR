@@ -46,7 +46,7 @@ python 3_depth_fusion.py 03001627 0 1
 
 Step 4: run *render.py* to render texture images from `top, bottom, left, right, front, back` views.
 ```
-./blender/blender render_views.blend --background --python render.py
+./blender/blender render_views.blend --background --python render.py <class id> <process_id> <total_num_of_processes>
 ```
 
 Step 5: run *4_get_colored_voxels.py* to obtain the 3D RGB color grid/voxel stored in `hdf5` format. The code runs slower than the previous ones, therefore we recommend using multiple processes:
