@@ -63,6 +63,7 @@ To output a few detailization results:
 ```
 python main.py --data_style style_color_car_16 --data_content content_car_test --data_dir ./data/02958343/ --input_size 64 --output_size 512 --test --test_tex --gpu 0
 ```
+Please add `--asymmetry` if testing the building category since we train the building category without using the symmetry assumption. 
 The output mesh can be found in folder samples or you can specify `--sample_dir`.
 
 ### IOU, LP, Div
